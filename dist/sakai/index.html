@@ -9,5 +9,30 @@
 <body>
 <app-root></app-root>
 <script src="runtime.630aebd98123de02.js" type="module"></script><script src="polyfills.cd1d414785f18278.js" type="module"></script><script src="scripts.000fe836456878f0.js" defer></script><script src="main.fa10ea30f32bce18.js" type="module"></script>
+<div vw="" class="enabled">
+    <div vw-access-button="" class="active"></div>
+    <div vw-plugin-wrapper="">
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+    window.onYouTubePlayerAPIReady = function(){
+        var player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: 'M7lc1UVf-VE',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+
+        player.addEventListener('load', () => {})
+        player.addEventListener('playingStateChange ', () => {})
+    }
+</script>
 
 </body></html>
