@@ -80,6 +80,24 @@
             </swiper>
         </div>
 
+        <div class="col-12 mt-2">
+            <span class="titleCarousel">Matérias</span>
+        </div>
+        <div class="col-12 heigthCards mb-4">
+            <swiper [slidesPerView]="3" [spaceBetween]="20" [pagination]="{ clickable: true }">
+                <ng-template *ngFor="let video of materias" swiperSlide>
+                    <div (click)="seeVideo(video)">
+                        <div class="col-12 text-center">
+                            <img [src]="video.path" class="imageVideo"/>
+                        </div>
+                        <div class="col-12 text-center textVideo">
+                            {{video.title}}
+                        </div>
+                    </div>
+                </ng-template>
+            </swiper>
+        </div>
+
     </div>
 
 </div>
