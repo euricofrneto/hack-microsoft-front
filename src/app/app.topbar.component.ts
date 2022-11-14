@@ -23,7 +23,7 @@ export class AppTopBarComponent {
     }
 
     logout(): void {
-        this.router.navigate(['/start'])
+        this.router.navigate(['/login'])
     }
 
     closeOp(): void {
