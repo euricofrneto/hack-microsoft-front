@@ -70,23 +70,25 @@ export class WatchComponent implements OnInit {
     start(): void {
         this.loading = false;
 
-        this.alta = this.shuffleArray(this.allVideos);
-        this.recentes = this.shuffleArray(this.allVideos);
-        this.curtidos = this.shuffleArray(this.allVideos);
-        this.relevantes = this.shuffleArray(this.allVideos);
-    }
+        this.alta = this.allVideos.map(value => ({value, sort: Math.random()}))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({value}) => value);
+        this.recentes = this.allVideos.map(value => ({value, sort: Math.random()}))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({value}) => value);
+        this.curtidos = this.allVideos.map(value => ({value, sort: Math.random()}))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({value}) => value);
+        this.relevantes = this.allVideos.map(value => ({value, sort: Math.random()}))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({value}) => value);
 
-    shuffleArray(arr): any {
-        for (let i = arr.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [arr[i], arr[j]] = [arr[j], arr[i]];
-        }
-        return arr;
     }
-
 
     seeVideo(video): void {
         console.log('video', video)
     }
+
+
 }
 
