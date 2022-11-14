@@ -22,26 +22,6 @@ export class AppTopBarComponent {
         this.closeOp();
     }
 
-    login(): void {
-        this.router.navigate(['/login'])
-        this.closeOp();
-    }
-
-    video(): void {
-        this.router.navigate(['/video'])
-        this.closeOp();
-    }
-
-    live(): void {
-        this.router.navigate(['/live'])
-        this.closeOp();
-    }
-
-    audio(): void {
-        this.router.navigate(['/audio'])
-        this.closeOp();
-    }
-
     logout(): void {
         this.router.navigate(['/start'])
     }
