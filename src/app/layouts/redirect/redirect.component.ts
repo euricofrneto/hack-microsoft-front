@@ -12,7 +12,7 @@ export class RedirectComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.router.navigate(['/start']);
+        this.router.navigate(['/login']);
     }
 
 }

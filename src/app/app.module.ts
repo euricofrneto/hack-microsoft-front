@@ -107,17 +107,9 @@ import {LoginComponent} from './components/login/login.component';
 import {CoreModule} from "./core/core.module";
 import {StartHackathonComponent} from './components/hackathon/start-hackathon/start-hackathon.component';
 import {AccountComponent} from './components/hackathon/account/account.component';
-import {MyDataComponent} from './components/hackathon/my-data/my-data.component';
-import {LiveComponent} from './components/hackathon/live/live.component';
-import {CurriculoComponent} from './components/hackathon/curriculo/curriculo.component';
-import {VideoComponent} from './components/hackathon/video/video.component';
-import {AudioComponent} from './components/hackathon/audio/audio.component';
-import {HistoryComponent} from './components/hackathon/history/history.component';
-import {FilesComponent} from './components/hackathon/files/files.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
-import { SwiperModule } from "swiper/angular";
-import { PlayerVideoComponent } from './components/hackathon/player-video/player-video.component';
-import { RedirectComponent } from './layouts/redirect/redirect.component';
+import {SwiperModule} from "swiper/angular";
+import {RedirectComponent} from './layouts/redirect/redirect.component';
 
 @NgModule({
     imports: [
@@ -225,14 +217,6 @@ import { RedirectComponent } from './layouts/redirect/redirect.component';
         LoginComponent,
         StartHackathonComponent,
         AccountComponent,
-        MyDataComponent,
-        LiveComponent,
-        CurriculoComponent,
-        VideoComponent,
-        AudioComponent,
-        HistoryComponent,
-        FilesComponent,
-        PlayerVideoComponent,
         RedirectComponent,
     ],
     providers: [
