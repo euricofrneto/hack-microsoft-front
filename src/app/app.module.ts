@@ -110,6 +110,11 @@ import {AccountComponent} from './components/hackathon/account/account.component
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {SwiperModule} from "swiper/angular";
 import {RedirectComponent} from './layouts/redirect/redirect.component';
+import { ProfileComponent } from './components/hackathon/profile/profile.component';
+import { HistoryComponent } from './components/hackathon/history/history.component';
+import { FilesComponent } from './components/hackathon/files/files.component';
+import { SavedComponent } from './components/hackathon/saved/saved.component';
+import { WatchComponent } from './components/hackathon/watch/watch.component';
 
 @NgModule({
     imports: [
@@ -218,6 +223,11 @@ import {RedirectComponent} from './layouts/redirect/redirect.component';
         StartHackathonComponent,
         AccountComponent,
         RedirectComponent,
+        ProfileComponent,
+        HistoryComponent,
+        FilesComponent,
+        SavedComponent,
+        WatchComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

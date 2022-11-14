@@ -1,6 +1,12 @@
-<app-topbar></app-topbar>
+<div class="md:hidden">
+    <app-topbar></app-topbar>
 
-<div class="layout-main-container">
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
+    <div class="layout-main-container">
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    </div>
+
+</div>
+<div class="hidden md:flex show-in-mobile">
+    <span class="text-information">Por favor vizualise nossa solução em um celular, fizemos primeiro a versão mobile, e no futuro iremos implementar a versão desktop. Obrigado :D</span>
 </div>
