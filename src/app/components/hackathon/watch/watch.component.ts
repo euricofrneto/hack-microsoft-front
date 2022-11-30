@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-watch',
@@ -60,10 +61,15 @@ export class WatchComponent implements OnInit {
         {title: 'Plano de aula', path: 'https://www.buscarsaude.com.br/y/2876/plano-de-aula-educacao-fisica.jpg'},
     ];
 
-    constructor() {
+    constructor(private router: Router) {
+
     }
 
     ngOnInit(): void {
+        const user = localStorage.getItem('user');
+        if (!user) {
+            this.router.navigate(['/login']);
+        }
         this.start();
     }
 

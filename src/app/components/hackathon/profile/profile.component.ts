@@ -1,25 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+    selector: 'app-profile',
+    templateUrl: './profile.component.html',
+    styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
 
-  special: boolean = false;
-  companies: any[] = [];
+    special: boolean = false;
+    companies: any[] = [];
 
-  constructor() {
-  }
+    constructor(private router: Router) {
 
-  ngOnInit(): void {
-
-    this.companies = [{
-      name: 'Escola da aeronautica',
-      id: 1,
     }
-    ]
-  }
+
+    ngOnInit(): void {
+        const user = localStorage.getItem('user');
+        if (!user) {
+            this.router.navigate(['/login']);
+        }
+
+        this.companies = [{
+            name: 'Escola da aeronautica',
+            id: 1,
+        }
+        ]
+    }
 
 }

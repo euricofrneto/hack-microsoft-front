@@ -23,6 +23,7 @@ export class AppTopBarComponent {
     }
 
     logout(): void {
+        localStorage.removeItem('user')
         this.router.navigate(['/login'])
     }
 
