@@ -11,7 +11,7 @@
 }
 
 .heigthCards {
-  height: 25vh;
+  height: 20vh;
 }
 
 .swiper {
@@ -34,4 +34,22 @@
 
 #watch-component {
   padding: 16px !important;
+}
+
+.product-item {
+  .product-item-content {
+    border: 1px solid var(--surface-d);
+    border-radius: 3px;
+    margin: .3rem;
+    text-align: center;
+  }
+
+  .product-image {
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+  }
+}
+
+.swiper{
+  z-index: 0!important;
 }

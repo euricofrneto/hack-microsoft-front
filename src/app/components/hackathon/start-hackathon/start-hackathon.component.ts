@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-
-// import Swiper core and required modules
 import SwiperCore, {Pagination} from "swiper";
+import {Router} from "@angular/router";
 
 SwiperCore.use([Pagination]);
 
@@ -13,10 +12,14 @@ SwiperCore.use([Pagination]);
 })
 export class StartHackathonComponent implements OnInit {
 
-    constructor() {
+    constructor(private router: Router) {
     }
 
     ngOnInit(): void {
+        const user = localStorage.getItem('user');
+        if(!user){
+            this.router.navigate(['/login']);
+        }
 
     }
 

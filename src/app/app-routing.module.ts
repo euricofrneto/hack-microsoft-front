@@ -10,12 +10,14 @@ import {HistoryComponent} from "./components/hackathon/history/history.component
 import {ProfileComponent} from "./components/hackathon/profile/profile.component";
 import {SavedComponent} from "./components/hackathon/saved/saved.component";
 import {WatchComponent} from "./components/hackathon/watch/watch.component";
+import {RegisterComponent} from "./components/hackathon/register/register.component";
 
 @NgModule({
     imports: [
         RouterModule.forRoot([
             {path: '', component: RedirectComponent},
             {path: 'login', component: LoginComponent},
+            {path: 'register', component: RegisterComponent},
             {
                 path: '', component: AdminLayoutComponent,
                 children: [

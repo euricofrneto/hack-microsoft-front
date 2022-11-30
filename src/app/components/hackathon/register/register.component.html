@@ -3,13 +3,32 @@
         <div class="col-12 xl:col-6" style="border-radius:56px; padding:0.3rem; background-color: white ; ">
             <div class="h-full w-full m-0">
                 <div class="w-full md:w-10 mx-auto">
-                    <div class="text-center inline-flex w-full justify-content-center align-items-center mt-3 mb-4">
+                    <div class="text-center inline-flex w-full justify-content-center align-items-center">
                         <img src="assets/layout/images/hackathon/estudai-logo.svg" class="logo">
                     </div>
                     <div class="col-12">
                         <p-messages [closable]="false"></p-messages>
                     </div>
-                    <div class="field col-12 pl-0 pr-0">
+
+                    <div class="field col-12 pl-0 pr-0 ">
+                        <span class="p-float-label">
+                            <input [(ngModel)]="name" type="text" id="name" pInputText class="inputs">
+                            <label for="name" class="textInputs">Nome</label>
+                        </span>
+                    </div>
+                    <div class="field col-12 pl-0 pr-0 ">
+                        <span class="p-float-label">
+                            <input [(ngModel)]="phone" type="text" id="phone" pInputText class="inputs">
+                            <label for="phone" class="textInputs">Telefone</label>
+                        </span>
+                    </div>
+                    <div class="field col-12 pl-0 pr-0 ">
+                        <span class="p-float-label">
+                            <input [(ngModel)]="cpf" type="text" id="cpf" pInputText class="inputs">
+                            <label for="cpf" class="textInputs">CPF</label>
+                        </span>
+                    </div>
+                    <div class="field col-12 pl-0 pr-0 ">
                         <span class="p-float-label">
                             <input [(ngModel)]="email" type="text" id="email" pInputText class="inputs">
                             <label for="email" class="textInputs">E-mail</label>
@@ -21,30 +40,14 @@
                             <label for="password" class="textInputs">Senha</label>
                         </span>
                     </div>
-                    <button [disabled]="loading" pButton pRipple (click)="login()" label="Entrar"
+                    <button pButton pRipple (click)="register()" label="Registrar"
                             class="w-full p-3 text-xl buttonSingin"></button>
+
                     <div class="text-center col-12 mt-3">
-                        <span class="colorSingUp cursor-pointer"><strong routerLink="/register">Criar conta</strong></span>
-                    </div>
-                    <div class="text-center col-12 mt-4">
-                        <span><strong>ou acessar com</strong></span>
-                    </div>
-                    <div class="col-12 inline-flex justify-content-center">
-                        <div class="md:col-6 col-10 inline-flex">
-                            <div class="col-4 cursor-pointer">
-                                <img (click)="social('gmail')" src="assets/layout/images/hackathon/gmail.svg">
-                            </div>
-                            <div class="col-4 cursor-pointer">
-                                <img (click)="social('facebook')" src="assets/layout/images/hackathon/facebook.svg">
-                            </div>
-                            <div class="col-4 cursor-pointer">
-                                <img (click)="social('apple')" src="assets/layout/images/hackathon/apple.png">
-                            </div>
-                        </div>
+                        <span class="colorSingUp cursor-pointer"><strong routerLink="/login">Voltar</strong></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
