@@ -4,5 +4,10 @@
     align-items: center;
     justify-content: center;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     border-top: 1px solid var(--surface-border);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
 }
