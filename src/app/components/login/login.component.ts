@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     password: string;
     email: string;
+    loading:boolean = false;
 
     constructor(public configService: ConfigService,
                 private loginService: LoginServiceService,
@@ -45,19 +46,27 @@ export class LoginComponent implements OnInit, OnDestroy {
             email: this.email,
             password: this.password,
         };
+        this.loading = true;
+        this.messageService.clear();
 
         this.loginService.login(payload).subscribe((response) => {
+            this.loading = false;
             if (response.status == 'success') {
                 localStorage.setItem('user', response.data);
                 this.router.navigate(['/start']);
             }
             if (response.status == 'error') {
-                this.messageService.add({severity:'warning', summary: 'Error', detail: 'Login ou senha incorretos'});
+                this.messageService.add({
+                    severity: 'error',
+                    summary: 'Erro',
+                    detail: 'Login ou senha incorretos',
+                    life:2000
+                });
             }
         });
     }
 
-    social(type):void{
+    social(type): void {
         // mensagem que ainda não fizemos essa implementação
     }
 

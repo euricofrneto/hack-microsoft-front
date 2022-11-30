@@ -8,6 +8,7 @@ import {Router} from "@angular/router";
 })
 export class WatchComponent implements OnInit {
     images: any[] = [];
+    cards: any[] = [];
     loading: boolean = true;
 
     alta: any[] = [];

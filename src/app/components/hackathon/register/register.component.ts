@@ -18,11 +18,11 @@ export class RegisterComponent implements OnInit, OnDestroy {
     subscription: Subscription;
     config: AppConfig;
 
-    name: string;
-    phone: string;
-    cpf: string;
-    email: string;
-    password: string;
+    name: string = '';
+    phone: string = '';
+    cpf: string = '';
+    email: string = '';
+    password: string = '';
 
     constructor(public configService: ConfigService,
                 private registerService: RegisterService,
@@ -51,6 +51,17 @@ export class RegisterComponent implements OnInit, OnDestroy {
             email: this.email,
             password: this.password
         }
+        this.messageService.clear();
+
+        if(!this.verify()){
+            this.messageService.add({
+                severity: 'error',
+                summary: 'Erro',
+                detail: 'Preencha todos os campos',
+                life:2000
+            });
+            return;
+        }
 
         this.registerService.register(payload).subscribe((response) => {
             if (response.status == 'success') {
@@ -61,8 +72,18 @@ export class RegisterComponent implements OnInit, OnDestroy {
                 this.messageService.add({severity: 'warning', summary: 'Erro', detail: response.message});
             }
         });
+    }
 
-
+    verify(): boolean {
+        if (this.name == '' || this.name == null ||
+            this.phone == '' || this.phone == null ||
+            this.cpf == '' || this.cpf == null ||
+            this.email == '' || this.email == null ||
+            this.password == '' || this.password == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
 }

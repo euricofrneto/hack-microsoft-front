@@ -6,6 +6,9 @@
                     <div class="text-center inline-flex w-full justify-content-center align-items-center">
                         <img src="assets/layout/images/hackathon/estudai-logo.svg" class="logo">
                     </div>
+                    <div class="col-12">
+                        <p-messages [closable]="false"></p-messages>
+                    </div>
 
                     <div class="field col-12 pl-0 pr-0 ">
                         <span class="p-float-label">
@@ -39,6 +42,10 @@
                     </div>
                     <button pButton pRipple (click)="register()" label="Registrar"
                             class="w-full p-3 text-xl buttonSingin"></button>
+
+                    <div class="text-center col-12 mt-3">
+                        <span class="colorSingUp cursor-pointer"><strong routerLink="/login">Voltar</strong></span>
+                    </div>
                 </div>
             </div>
         </div>
