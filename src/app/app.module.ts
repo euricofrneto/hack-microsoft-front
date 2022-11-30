@@ -115,6 +115,7 @@ import { HistoryComponent } from './components/hackathon/history/history.compone
 import { FilesComponent } from './components/hackathon/files/files.component';
 import { SavedComponent } from './components/hackathon/saved/saved.component';
 import { WatchComponent } from './components/hackathon/watch/watch.component';
+import { RegisterComponent } from './components/hackathon/register/register.component';
 
 @NgModule({
     imports: [
@@ -228,6 +229,7 @@ import { WatchComponent } from './components/hackathon/watch/watch.component';
         FilesComponent,
         SavedComponent,
         WatchComponent,
+        RegisterComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
